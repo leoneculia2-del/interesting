@@ -1,0 +1,13 @@
+@use "../base/mixins" as *;
+
+$bg-primary: #333;
+
+:root {
+    --bg-color: #333;
+}
+
+.header {
+    background: var(--bg-color, #555);
+    @include center();
+
+}
