@@ -1,13 +1,56 @@
 @use "../base/mixins" as *;
-
-$bg-primary: #333;
-
-:root {
-    --bg-color: #333;
+@use "../base/variables" as *;
+body{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .header {
-    background: var(--bg-color, #555);
-    @include center();
+    position: fixed;
+    width: 100%;
+    top: 0;
+    font-family: $text-primary;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
 
+    &__logo{
+      margin-left: 40px;
+    }
+    
+    &__list {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      
+      &--hover{
+            color: white;
+
+            &:hover{
+                  color: red;
+                  transition: 600ms;
+            }
+      }
+      
 }
+ 
+
+&__contacts {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      margin-right: 60px;
+      
+      &--hover{
+            color: white;
+
+            &:hover{
+                  color: red;
+                  transition: 600ms;
+            }
+      }
+    }
+}
+
+      
