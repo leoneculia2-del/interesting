@@ -25,16 +25,36 @@ body{
       align-items: center;
       
       &--hover{
+            position: relative;
             color: white;
+            transition: 600ms;
 
             &:hover{
                   color: red;
                   transition: 600ms;
             }
+            
+            &::after{
+                  content: "";
+                  height: 2px;
+                  width: 100%;
+                  position: absolute;
+                  bottom: -8px;
+                  left: 0;
+                  background-color: red;
+                  transition: 600ms;
+                  transform: scaleX(0);
+                  
+                  
+            }
+            &:hover::after{
+                  transform: scaleX(1);
+                  transition: 600ms;
+            }
       }
       
 }
- 
+
 
 &__contacts {
       display: flex;
@@ -42,8 +62,9 @@ body{
       align-items: center;
       margin-right: 60px;
       
-      &--hover{
+      &--link{
             color: white;
+            transition: 600ms;
 
             &:hover{
                   color: red;
