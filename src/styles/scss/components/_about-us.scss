@@ -1,0 +1,58 @@
+@use "../base/mixins" as *;
+@use "../base/variables" as *;
+
+.about-us {
+    background-image: url("../../img/bg.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 30%;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+
+    &::after{
+        content: "";
+        background-color: black;
+        position: absolute;
+        opacity: .85;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        transition: 600ms;
+    }
+
+    &__information{
+        position: relative;
+        z-index: 1;
+        
+        &--text{
+            font-size: 24px;
+            padding: 4px 16px;
+            color: white;
+
+            &-color{
+                color: $text-color;    
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px ){
+    .about-us{
+        background-position-x: center;
+        margin-top: 10vh;
+        align-items: start;
+
+        &__information{
+            margin-top: 24px;
+        
+        &--text{
+            font-size: 16px;
+            padding: 4px 8px;
+        }
+    }
+    }
+}

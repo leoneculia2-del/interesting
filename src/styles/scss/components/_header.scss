@@ -14,8 +14,11 @@ body{
     display: flex;
     justify-content: space-between;
     background-color: black;
+    z-index: 1;
 
     &__logo{
+      height: 120px;
+      width: 140px;
       margin-left: 40px;
     }
     
@@ -30,7 +33,7 @@ body{
             transition: 600ms;
 
             &:hover{
-                  color: red;
+                  color: $bg-primary;
                   transition: 600ms;
             }
             
@@ -41,7 +44,7 @@ body{
                   position: absolute;
                   bottom: -8px;
                   left: 0;
-                  background-color: red;
+                  background-color: $bg-primary;
                   transition: 600ms;
                   transform: scaleX(0);
                   
@@ -67,7 +70,7 @@ body{
             transition: 600ms;
 
             &:hover{
-                  color: red;
+                  color: $bg-primary;
                   transition: 600ms;
             }
       }
@@ -75,3 +78,22 @@ body{
 }
 
       
+@media screen and (max-width: 1024px ) {
+      .header {
+            height: 10vh;
+            &__logo{
+                  height: 30px;
+                  width: 90px;
+                  margin-left: 5vw;
+            }
+
+		&__list {
+                  display: none;
+		}
+
+		&__contacts {
+                  display: none;
+		}
+}
+
+}
