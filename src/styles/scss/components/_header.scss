@@ -1,10 +1,5 @@
 @use "../base/mixins" as *;
 @use "../base/variables" as *;
-body{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
 
 .header {
     position: fixed;
@@ -80,11 +75,11 @@ body{
       
 @media screen and (max-width: 1024px ) {
       .header {
-            height: 10vh;
+            height: 85px;
             &__logo{
                   height: 30px;
                   width: 90px;
-                  margin-left: 5vw;
+                  margin-left: 16px;
             }
 
 		&__list {
