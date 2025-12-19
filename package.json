@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "scss": "sass src/styles/scss/style.scss src/styles/css/style.min.css --style=compressed",
+    "scss": "sass src/styles/scss/style.scss src/styles/css/style.min.css --style=compressed --watch",
     "serve": "live-server src",
     "dev": "concurrently \"npm run scss\" \"npm run serve\""
   },
